@@ -46,7 +46,7 @@ To run this application locally:
 ## Data Sources
 
 - Population Data: [UN Data - SYB66_1_202310_Population, Surface Area and Density](https://data.un.org/_Docs/SYB/CSV/SYB66_1_202310_Population,%20Surface%20Area%20and%20Density.csv)
-- GDP Data: [UN Data - SYB66_230_202310_GDP and GDP Per Capita](http://data.un.org/_Docs/SYB/CSV/SYB66_230_202310_GDP%20and%20GDP%20Per%20Capita.csv)
+- GDP Data: [UN Data - SYB66_230_202310_GDP and GDP Per Capita](https://data.un.org/_Docs/SYB/CSV/SYB66_230_202310_GDP%20and%20GDP%20Per%20Capita.csv)
 - Land Area Data: [Our World in Data - Land Area](https://ourworldindata.org/grapher/land-area-km)
 
 ## Structure of the Repository
