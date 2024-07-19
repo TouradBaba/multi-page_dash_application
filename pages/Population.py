@@ -6,7 +6,7 @@ import pandas as pd
 from dash_bootstrap_templates import load_figure_template
 
 
-# Register the page with Dash app
+# Register the page
 dash.register_page(__name__, path='/', name='Population 📊')
 
 load_figure_template("darkly")
@@ -48,10 +48,11 @@ layout = html.Div(
         html.Div(
             className='jumbotron bg-dark text-white',
             children=[
-                html.H1("Population Data Dashboard", className='display-4'),
+                html.H1("Population Data Dashboard", className='display-4', style={'fontSize': '3rem',
+                                                                                   'textAlign': 'center'}),
                 html.P(
                     "Explore population data over time by selecting a country or region.",
-                    className='lead'
+                    className='lead smaller-text', style={'textAlign': 'center'}
                 )
             ]
         ),
@@ -138,8 +139,6 @@ layout = html.Div(
             ]
         ),
 
-        html.Hr(className='my-4'),
-
         # Additional charts section
         html.Div(
             className='row mt-4',
@@ -158,9 +157,9 @@ layout = html.Div(
                 )
             ]
         ),
+        html.Hr(className='my-4'),
 
-        # Pie chart section
-
+        # Pie charts section
         html.Div(
             className='row mt-4 justify-content-end',
             children=[

@@ -24,7 +24,7 @@ app.layout = html.Div(
 
         html.Div(
             [
-                dcc.Link(page['name'] + "  |  ", href=page['path'], className="btn btn-dark m-2 fs-5")
+                dcc.Link(page['name'] + "  |  ", href=page['path'], className="btn btn-dark m-2 fs-5 btn-lg")
                 for page in dash.page_registry.values()
             ],
             style={'textAlign': 'center'}  # Center the content horizontally

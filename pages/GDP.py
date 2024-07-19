@@ -38,10 +38,10 @@ layout = html.Div(
         html.Div(
             className='jumbotron bg-dark text-white',
             children=[
-                html.H1("GDP Data Dashboard", className='display-4'),
+                html.H1("GDP Data Dashboard", className='display-4', style={'fontSize': '3rem', 'textAlign': 'center'}),
                 html.P(
-                    "Select a country or region to see details and its GDP data over time.",
-                    className='lead'
+                    "Explore GDP data over time by selecting a country or region.",
+                    className='lead smaller-text', style={'textAlign': 'center'}
                 )
             ]
         ),
