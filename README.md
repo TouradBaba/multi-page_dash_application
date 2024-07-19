@@ -1,6 +1,6 @@
 # Population and GDP Data Visualization Dashboard
 
-![Population and GDP Data Visualization Dashboard](assets/Screenshots/Population1.png)
+![Population and GDP Data Visualization Dashboard](assets/Screenshots/1-Overview.png)
 
 This repository contains a Dash web application built to visualize population and GDP data interactively. The app provides insights into demographic trends, economic indicators, and geographic distributions using interactive maps and various types of charts.
 
@@ -66,6 +66,9 @@ To run this application locally:
 
 ### 1-Population Page
 
+**This image displays a map showing population data worldwide.**
+![Population Page](assets/Screenshots/Population1.png)
+
 **This image displays a map showing population data when a specific country is selected.**
 
 ![Population Page](assets/Screenshots/Population2.png)
@@ -85,14 +88,11 @@ To run this application locally:
 
 ![GDP Page](assets/Screenshots/GDP_GIF.gif)
 
-**This image presents a map displaying GDP data.**
+**This image presents a map displaying GDP data when a specific country is selected.**
 
 ![GDP Page](assets/Screenshots/GDP1.png)
 
-**This image depicts the GDP map highlighting specific details when a country is selected**
-
-![GDP Page](assets/Screenshots/GDP2.png)
 
 **This image shows additional visualizations and figures related to GDP data.**
 
-![GDP Page](assets/Screenshots/GDP3.png)
+![GDP Page](assets/Screenshots/GDP2.png)
