@@ -51,7 +51,7 @@ To run this application locally:
 
 ## Structure of the Repository
 
-- `Jupyter_Notebooks/`: Contains Jupyter notebooks used for data exploration and analysis.
+- `jupyter_notebooks/`: Contains Jupyter notebooks used for data exploration and analysis.
 - `assets/`: Stores some screenshots and the Solar theme from [Bootswatch](https://bootswatch.com/).
 - `data/`: Holds cleaned and processed datasets used by the application.
 - `pages/`: Includes Python scripts defining different pages of the Dash app.
