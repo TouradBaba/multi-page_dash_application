@@ -21,7 +21,7 @@ This repository contains a Dash web application built to visualize population an
 
 ## Deployment
 
-The application is deployed on Heroku and is accessible at [Population and GDP Data Visualization Dashboard](https://dash-app1-3836e5244b0e.herokuapp.com/). Please note that when accessing the app for the first time, figures may take up to 1 minute to load. Reloading the page after this initial delay will ensure the figures appear correctly.
+The application is deployed on Heroku and is accessible at [Population and GDP Data Visualization Dashboard](https://dash-app1-3836e5244b0e.herokuapp.com/). Please note that when accessing the app for the first time, figures may take up to 1-2 minutes to load. Reloading the page after this initial delay will ensure the figures appear correctly.
 
 ## Installation and Setup
 
