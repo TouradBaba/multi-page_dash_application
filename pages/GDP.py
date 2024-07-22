@@ -4,7 +4,6 @@ from dash.dependencies import Input, Output, State
 import plotly.express as px
 import pandas as pd
 
-
 # Register the page
 dash.register_page(__name__, path='/gdp', name='GDP 💲')
 
@@ -108,7 +107,7 @@ layout = html.Div(
                             style={'marginBottom': '20px', 'marginLeft': '20px', 'marginRight': '20px'}
                         ),
                         html.P('Percentage of Global GDP Area by Region', className="text-center",
-                               style={'fontSize': 25, 'color': '#FFFFFF'}),
+                               style={'fontSize': 26, 'color': '#FFFFFF'}),
                         html.Div(
                             dcc.Graph(id='gdp-pie-chart', config={'displayModeBar': False}),
                             # Hide mode bar for the pie chart
