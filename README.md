@@ -17,7 +17,8 @@ This repository contains a Dash web application built to visualize population an
 
 - **Interactive Dashboards**: Explore population and GDP trends by country and region interactively.
 - **Geospatial Visualization**: Utilize interactive maps to visualize population density and GDP distribution.
-- **Multi-page Application**: Navigate between different sections dedicated to population and GDP data.
+- **Multi-page Application**: Navigate between different sections dedicated to population and GDP data. 
+- **Deployment**: Accessible online via Heroku, providing convenient access to the dashboards.
 
 ## Deployment
 
