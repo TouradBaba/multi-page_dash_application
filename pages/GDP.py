@@ -169,7 +169,8 @@ layout = html.Div(
                             className='d-flex justify-content-between align-items-center',
                             children=[
                                 html.Div([
-                                    html.Button('Play', id='play-button', n_clicks=0, className='btn btn-primary ml-2'),
+                                    html.Button('Play', id='play-button', n_clicks=0,
+                                                className='btn btn-primary ml-2 btn-lg'),
                                 ]),
                                 html.Div([
                                     dcc.RangeSlider(
