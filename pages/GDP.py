@@ -143,8 +143,8 @@ layout = html.Div(
                         html.Div(
                             id='gdp-line-plots-container',
                             children=[
-                                dcc.Graph(id='gdp-line-plot', style={'height': '500px'}),
-                                dcc.Graph(id='growth-rate-line-plot', style={'height': '500px'})
+                                dcc.Graph(id='gdp-line-plot', style={'height': '510px'}),
+                                dcc.Graph(id='growth-rate-line-plot', style={'height': '510px'})
                             ],
                             style={'marginTop': '20px'}
                         )
@@ -382,7 +382,7 @@ def update_gdp_per_capita_bar_chart(selected_year):
         labels={'GDP per capita (US dollars)': 'GDP Per Capita (US$)', 'Region/Country/Area': 'Region'}
     )
     bar_figure.update_layout(
-        height=474
+        height=475
     )
     return bar_figure
 
