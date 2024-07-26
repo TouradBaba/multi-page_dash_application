@@ -8,8 +8,10 @@ import pandas as pd
 dash.register_page(__name__, path='/gdp', name='GDP 💲')
 
 # Load the datasets
-df_gdp_countries = pd.read_excel('https://github.com/TouradBaba/exploratory_data_analysis_and_visualization/raw/master/data/cleaned_gdp.xlsx')
-df_gdp_regions = pd.read_excel('https://github.com/TouradBaba/exploratory_data_analysis_and_visualization/raw/master/data/cleaned_gdp2.xlsx')
+df_gdp_countries = pd.read_excel(
+    'https://github.com/TouradBaba/exploratory_data_analysis_and_visualization/raw/master/data/cleaned_gdp.xlsx')
+df_gdp_regions = pd.read_excel(
+    'https://github.com/TouradBaba/exploratory_data_analysis_and_visualization/raw/master/data/cleaned_gdp2.xlsx')
 # Convert 'GDP in current prices (millions of US dollars)' to numeric, coercing errors
 df_gdp_countries['GDP in current prices (millions of US dollars)'] = (
     pd.to_numeric(df_gdp_countries['GDP in current prices (millions of US dollars)'], errors='coerce'))
@@ -20,7 +22,8 @@ df_gdp_regions['GDP in current prices (millions of US dollars)'] = (
 latest_years_countries = df_gdp_countries.groupby('Region/Country/Area')['Year'].max().reset_index()
 
 # Merge to get the latest data for each country
-latest_data_gdp_countries = pd.merge(df_gdp_countries, latest_years_countries, on=['Region/Country/Area', 'Year'], how='inner')
+latest_data_gdp_countries = pd.merge(df_gdp_countries, latest_years_countries, on=['Region/Country/Area', 'Year'],
+                                     how='inner')
 
 # Get unique countries and regions for dropdown options
 countries = latest_data_gdp_countries['Region/Country/Area'].unique()
@@ -59,7 +62,7 @@ layout = html.Div(
                     className='col-md-6 details-container bg-light p-3',
                     children=[
                         html.Div(id='country-details', className='details'),
-                        html.Hr(style={'backgroundColor': 'black'}),  # Black line separator
+                        html.Hr(style={'backgroundColor': 'black'}),
                         dcc.Dropdown(
                             id='country-dropdown',
                             options=[{'label': country, 'value': country} for country in countries],
@@ -100,18 +103,16 @@ layout = html.Div(
                             dcc.Dropdown(
                                 id='gdp-pie-year-dropdown',
                                 options=[{'label': year, 'value': year} for year in df_gdp_regions['Year'].unique()],
-                                value=2021,  # Default value
+                                value=2021,
                                 placeholder="Select a year",
                                 className='mb-3'
-                            ),
-                            style={'marginBottom': '20px', 'marginLeft': '20px', 'marginRight': '20px'}
+                            )
                         ),
-                        html.P('Percentage of Global GDP Area by Region', className="text-center",
-                               style={'fontSize': 26, 'color': '#FFFFFF'}),
                         html.Div(
-                            dcc.Graph(id='gdp-pie-chart', config={'displayModeBar': False}),
-                            # Hide mode bar for the pie chart
-                            style={'height': '600px', 'marginTop': '20px'}
+                            dcc.Graph(id='gdp-pie-chart', config={'displayModeBar': False})
+                        ),
+                        html.Div(
+                            dcc.Graph(id='gdp-per-capita-bar-chart', config={'displayModeBar': False})
                         ),
                     ]
                 ),
@@ -142,8 +143,8 @@ layout = html.Div(
                         html.Div(
                             id='gdp-line-plots-container',
                             children=[
-                                dcc.Graph(id='gdp-line-plot'),
-                                dcc.Graph(id='growth-rate-line-plot')
+                                dcc.Graph(id='gdp-line-plot', style={'height': '500px'}),
+                                dcc.Graph(id='growth-rate-line-plot', style={'height': '500px'})
                             ],
                             style={'marginTop': '20px'}
                         )
@@ -160,7 +161,7 @@ layout = html.Div(
                 html.P(
                     "The map below presents a global view of GDP data across various countries. "
                     "Use the play button to animate changes over time, or adjust the slider to focus on specific years.",
-                    className='lead',style={'fontSize': 25, 'color': '#FFFFFF'}
+                    className='lead', style={'fontSize': 25, 'color': '#FFFFFF'}
                 ),
                 html.Div(
                     className='col-md-12 flat-map-container',
@@ -193,7 +194,7 @@ layout = html.Div(
                             disabled=True  # Start with the interval disabled
                         ),
                     ],
-                    style={'height': '400px', 'marginBottom': '20px'}  # Adjust height and margins
+                    style={'height': '400px', 'marginBottom': '20px'}
                 )
             ]
         )
@@ -317,8 +318,10 @@ def update_gdp_line_plot(region, selected_years):
     filtered_data = df_gdp_regions[(df_gdp_regions['Region/Country/Area'] == region) &
                                    (df_gdp_regions['Year'] >= selected_years[0]) & (df_gdp_regions['Year'] <= selected_years[1])]
 
-    gdp_line_plot = px.line(filtered_data, x='Year', y='GDP in current prices (millions of US dollars)', title=f'GDP in Current Prices Over Time for {region}')
-    gdp_line_plot.update_layout(xaxis_title='Year', yaxis_title='GDP in current prices (millions of US dollars)', height=300)
+    gdp_line_plot = px.line(filtered_data, x='Year', y='GDP in current prices (millions of US dollars)',
+                            title=f'GDP in Current Prices Over Time for {region}')
+    gdp_line_plot.update_layout(xaxis_title='Year', yaxis_title='GDP in current prices (millions of US dollars)',
+                                height=510)
 
     return gdp_line_plot
 
@@ -333,39 +336,12 @@ def update_growth_rate_line_plot(region, selected_years):
     filtered_data = df_gdp_regions[(df_gdp_regions['Region/Country/Area'] == region) &
                                    (df_gdp_regions['Year'] >= selected_years[0]) & (df_gdp_regions['Year'] <= selected_years[1])]
 
-    growth_rate_line_plot = px.line(filtered_data, x='Year', y='GDP real rates of growth (percent)', title=f'  GDP Real Rates of Growth Over Time for {region}')
-    growth_rate_line_plot.update_layout(xaxis_title='Year', yaxis_title='GDP real rates of growth (percent)', height=300)
+    growth_rate_line_plot = px.line(filtered_data, x='Year', y='GDP real rates of growth (percent)',
+                                    title=f'GDP Real Rates of Growth Over Time for {region}')
+    growth_rate_line_plot.update_layout(xaxis_title='Year', yaxis_title='GDP real rates of growth (percent)',
+                                        height=510)
 
     return growth_rate_line_plot
-
-
-# Callback to update the GDP region details based on dropdown selection
-@callback(
-    Output('gdp-region-details', 'children'),
-    [Input('gdp-region-dropdown', 'value'),
-     Input('gdp-year-slider', 'value')])
-def update_gdp_region_details(region, selected_years):
-    if region:
-        selected_data = df_gdp_regions[(df_gdp_regions['Region/Country/Area'] == region) &
-                               (df_gdp_regions['Year'] >= selected_years[0]) & (
-                                       df_gdp_regions['Year'] <= selected_years[1])]
-    else:
-        selected_data = df_gdp_regions[
-            (df_gdp_regions['Year'] >= selected_years[0]) & (df_gdp_regions['Year'] <= selected_years[1])]
-
-    if not selected_data.empty:
-        # Region details
-        if region:
-            region_details = html.Div([
-                html.H3(f"{region}", className='region-name'),
-                html.P(f"Years: {selected_years[0]} - {selected_years[1]}", className='region-years')
-            ], className='region-details')
-        else:
-            region_details = html.P("Select a region to see details.", className='placeholder-text')
-    else:
-        region_details = html.P("No data available for selected region and year range.", className='placeholder-text')
-
-    return region_details
 
 
 # Callback to update the pie chart based on year dropdown selection
@@ -384,9 +360,31 @@ def update_gdp_pie_chart(selected_year):
                         title=f'Percentage of Global GDP by Region in {selected_year}')
 
     pie_figure.update_traces(textposition='inside', textinfo='percent+label')
-    pie_figure.update_layout(margin=dict(l=20, r=20, t=40, b=20))  # Adjust margin for better visualization
-
+    pie_figure.update_layout(
+        autosize=True,
+        height=600,
+    )
     return pie_figure
+
+
+# Callback to update the GDP per capita bar chart based on year dropdown selection
+@callback(
+    Output('gdp-per-capita-bar-chart', 'figure'),
+    [Input('gdp-pie-year-dropdown', 'value')]
+)
+def update_gdp_per_capita_bar_chart(selected_year):
+    selected_data = df_gdp_regions[df_gdp_regions['Year'] == selected_year]
+    bar_figure = px.bar(
+        selected_data,
+        x='Region/Country/Area',
+        y='GDP per capita (US dollars)',
+        title=f'GDP Per Capita by Region in {selected_year}',
+        labels={'GDP per capita (US dollars)': 'GDP Per Capita (US$)', 'Region/Country/Area': 'Region'}
+    )
+    bar_figure.update_layout(
+        height=474
+    )
+    return bar_figure
 
 
 # Callback to update the flat map based on the interval or range slider
