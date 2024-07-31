@@ -2,7 +2,7 @@
 
 ![Population and GDP Data Visualization Dashboard](assets/Screenshots/1-Overview.png)
 
-This repository contains a Multi-Page Dash web application built to visualize population and GDP data interactively. The app provides insights into demographic trends, economic indicators, and geographic distributions using interactive maps and various types of charts and is deployed on Heroku and PythonAnywhere.
+This repository contains a multi-page Dash web application designed to visualize population and GDP data interactively. The app provides insights into demographic trends, economic indicators, and geographic distributions through interactive maps and various types of charts. It is deployed on Heroku and PythonAnywhere.
 
 ## Table of Contents
 
@@ -18,11 +18,11 @@ This repository contains a Multi-Page Dash web application built to visualize po
 - **Interactive Dashboards**: Explore population and GDP trends by country and region interactively.
 - **Geospatial Visualization**: Utilize interactive maps to visualize population density and GDP distribution.
 - **Multi-page Application**: Navigate between different sections dedicated to population and GDP data. 
-- **Deployment**: Accessible online via Heroku, providing convenient access to the dashboards.
+- **Deployment**: Accessible online via Heroku and PythonAnywhere.
 
 ## Deployment
 
-The application is deployed on both Heroku and PythonAnywhere. You can access the live Population and GDP Data Visualization Dashboard at the following locations:
+The application is deployed on both Heroku and PythonAnywhere. You can access it at the following locations:
 
 - [Heroku](https://dash-app1-3836e5244b0e.herokuapp.com/)
 - [PythonAnywhere](https://tourad.pythonanywhere.com/)
