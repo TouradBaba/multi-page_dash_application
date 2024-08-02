@@ -74,7 +74,6 @@ To run this application locally:
 **This image displays a map showing GDP data worldwide.**
 ![GDP Page](assets/Screenshots/GDP1.png)
 
-
 **This image presents a map displaying GDP data when a specific country is selected.**
 
 ![GDP Page](assets/Screenshots/GDP2.png)
