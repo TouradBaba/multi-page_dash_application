@@ -12,13 +12,13 @@ load_figure_template("darkly")
 app.layout = html.Div(
     [
         html.Br(),
-        html.H1("Dash App for Population and GDP Data", style={'fontSize': 50, 'textAlign': 'center'}),
+        html.H1("Dash App for Population and GDP Data", style={'fontSize': 72, 'textAlign': 'center'}),
 
         # Additional text with instructions
         html.Div(
             [
                 html.P("Click on 'Population' to visualize population data or 'GDP' to visualize GDP data.",
-                       style={'fontSize': 20, 'textAlign': 'center'})
+                       style={'fontSize': 30, 'textAlign': 'center'})
             ]
         ),
 
@@ -27,11 +27,10 @@ app.layout = html.Div(
                 dcc.Link(page['name'] + "  |  ", href=page['path'], className="btn btn-dark m-2 fs-5 btn-lg")
                 for page in dash.page_registry.values()
             ],
-            style={'textAlign': 'center'}  # Center the content horizontally
+            style={'textAlign': 'center'}
         ),
         html.Hr(),
 
-        # Content of each page will be rendered here
         dash.page_container
     ]
 )

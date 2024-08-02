@@ -5,9 +5,8 @@ import plotly.express as px
 import pandas as pd
 from dash_bootstrap_templates import load_figure_template
 
-
 # Register the page
-dash.register_page(__name__, path='/', name='Population 📊')
+dash.register_page(__name__, path='/population', name='Population 📊')
 
 load_figure_template("darkly")
 
