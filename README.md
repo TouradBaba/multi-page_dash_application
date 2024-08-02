@@ -69,7 +69,25 @@ To run this application locally:
 
 ## Screenshots
 
-### 1-Population Page
+### 1-GDP Page
+
+**This image displays a map showing GDP data worldwide.**
+![GDP Page](assets/Screenshots/GDP1.png)
+
+
+**This image presents a map displaying GDP data when a specific country is selected.**
+
+![GDP Page](assets/Screenshots/GDP2.png)
+
+**This animated GIF visualizes how GDP varies across countries over different time periods.**
+
+![GDP Page](assets/Screenshots/GDP_GIF.gif)
+
+**This image shows additional visualizations and figures related to GDP data.**
+
+![GDP Page](assets/Screenshots/GDP3.png)
+
+### 2-Population Page
 
 **This image displays a map showing population data worldwide.**
 ![Population Page](assets/Screenshots/Population1.png)
@@ -85,23 +103,3 @@ To run this application locally:
 **This image shows a heatmap and related figures specifically when a region is selected.**
 
 ![Population Page](assets/Screenshots/Population4.png)
-
-
-### 2-GDP Page
-
-**This animated GIF visualizes how GDP varies across countries over different time periods.**
-
-![GDP Page](assets/Screenshots/GDP_GIF.gif)
-
-**This image displays a map showing GDP data worldwide.**
-![GDP Page](assets/Screenshots/GDP1.png)
-
-
-**This image presents a map displaying GDP data when a specific country is selected.**
-
-![GDP Page](assets/Screenshots/GDP2.png)
-
-
-**This image shows additional visualizations and figures related to GDP data.**
-
-![GDP Page](assets/Screenshots/GDP3.png)
