@@ -268,6 +268,12 @@ def update_map(selected_country):
         locationmode='country names',
         color='Population mid-year estimates (millions)',
         hover_name='Region/Country/Area',
+        hover_data={
+            'Population aged 0 to 14 years old (percentage)': True,
+            'Population aged 60+ years old (percentage)': True,
+            'Sex ratio (males per 100 females)': True,
+            'Population mid-year estimates (millions)': True,
+        },
         color_continuous_scale='RdBu',
         projection='orthographic',
         title='Country Population Data',

@@ -277,6 +277,11 @@ def update_map(selected_country):
         locationmode='country names',
         color='GDP in current prices (millions of US dollars)',
         hover_name='Region/Country/Area',
+        hover_data={
+            'GDP in current prices (millions of US dollars)': ':,.2f',
+            'GDP per capita (US dollars)': ':,.2f',
+            'GDP real rates of growth (percent)': ':,.2f'
+        },
         color_continuous_scale='Rainbow',
         projection='orthographic',
         title='Country GDP Data'
@@ -415,6 +420,11 @@ def update_flat_map(n_intervals, slider_value, interval_disabled):
         locationmode='country names',
         color="GDP in current prices (millions of US dollars)",
         hover_name="Region/Country/Area",
+        hover_data={
+            'GDP in current prices (millions of US dollars)': ':,.2f',
+            'GDP per capita (US dollars)': ':,.2f',
+            'GDP real rates of growth (percent)': ':,.2f'
+        },
         color_continuous_scale='Rainbow',
         title=f"GDP in {year}"
     )
