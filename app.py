@@ -17,7 +17,7 @@ app.layout = html.Div(
         # Additional text with instructions
         html.Div(
             [
-                html.P("Click on 'Population' to visualize population data or 'GDP' to visualize GDP data.",
+                html.P("Click on 'GDP' to visualize GDP data or 'Population' to visualize population data.",
                        style={'fontSize': 30, 'textAlign': 'center'})
             ]
         ),
