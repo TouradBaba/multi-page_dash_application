@@ -7,9 +7,3 @@ __pycache__/
 
 # Ignore PyCharm project files
 .idea/
-
-# Ignore macOS system files
-.DS_Store
-
-# Ignore environment variable files
-.env
