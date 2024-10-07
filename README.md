@@ -34,7 +34,7 @@ To run this application locally:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/TouradBaba/exploratory_data_analysis_and_visualization.git
+   git clone https://github.com/TouradBaba/multi-page_dash_application.git
    ```
 
 2. Install dependencies:
